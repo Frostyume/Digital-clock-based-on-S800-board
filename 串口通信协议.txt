@@ -1,0 +1,33 @@
+串口通信协议（所有命令均以回车键作为结束符）
+
+1.重启命令：
+RESET			软重启数字钟，保留当前时间日期
+
+2.设置命令：
+SET TIME XX:XX:XX		设置时间为XX时XX分XX秒		如：SET TIME 11:45:14  设置时间为11时45分14秒
+SET DATE XXXX-XX-XX	设置日期为XXXX年XX月XX日		如：SET DATE 2023-06-18 设置日期为2023年6月18日
+SET ALARM XX:XX:XX	设置闹钟时间为XX时X分XX秒		如：SET TIME 23:33:33  设置闹钟时间为23时23分23秒
+SET RING 1/2/3		设置闹钟铃声为铃声1/2/3，		如：SET RING 2  设置闹钟铃声为两只老虎
+			铃声1：小星星，铃声2：两只老虎，铃声3：生日快乐
+OPENALARM		打开闹钟
+CLOSEALARM		关闭闹钟
+SET STWATCH XX:XX	设置倒计时从XX分XX秒开始		如：SET STWATCH 01:30  设置倒计时从1分30秒开始
+
+3.获取状态命令：
+GET TIME			获取当前时间
+GET DATE		获取当前日期
+GET ALARM		获取当前闹钟时间
+
+4.运行命令：
+RUN TIME		显示当前时间
+RUN DATE		显示当前日期
+RUN ALARM		显示当前闹钟时间
+RUN STWATCH		运行倒计时秒表
+PAUSE	  		暂停倒计时秒表
+
+5.翻转命令：
+TOGGLE			翻转数码管显示
+
+
+以上命令均不区分大小写且有空格容错功能，如输入"GetTime"或“RUN t i m e”均可正常执行；输入“?”可获取帮助，查看
+所有命令；如遇无法识别的命令会提示“输入的命令有误，您可以输入“?”来查看所有命令”。
